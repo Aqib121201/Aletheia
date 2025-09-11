@@ -26,3 +26,10 @@
 -  Fairness-drift dashboard (design ready).
 
 ---
+
+### How to test
+1. Run: `make env`
+2. Run: `make reproduce`
+3. Verify that `experiments/results/sample_run.json` and `zk/sample_proofs/sample.proof` are created.
+
+---
