@@ -1,0 +1,674 @@
+{
+  "metadata": {
+    "dataset_name": "Berlin Allocation Sample Data",
+    "version": "1.0.0",
+    "description": "Comprehensive sample dataset for cryptographically-auditable allocation system testing in Berlin",
+    "created_date": "2025-09-21T13:31:00+01:00",
+    "source_project": "Project Aletheia",
+    "geographic_scope": "Berlin, Germany",
+    "population_reference": 3897145,
+    "data_types": [
+      "housing",
+      "healthcare",
+      "demographics",
+      "allocation_parameters"
+    ],
+    "fairness_metrics_included": true,
+    "zk_proof_compatible": true,
+    "ergodic_parameters": {
+      "temporal_horizon": "2025-2030",
+      "allocation_frequency": "quarterly",
+      "drift_tolerance": 0.05,
+      "convergence_threshold": 0.001
+    }
+  },
+  "districts": [
+    {
+      "district_id": "BER_001",
+      "name": "Mitte",
+      "area_km2": 39.47,
+      "population": 384000,
+      "density_per_km2": 9731,
+      "median_income": 48500,
+      "unemployment_rate": 0.087,
+      "housing_shortage_index": 0.23,
+      "healthcare_accessibility_score": 0.91,
+      "gentrification_pressure": 0.78,
+      "public_transport_score": 0.95,
+      "allocation_priority_weight": 0.85
+    },
+    {
+      "district_id": "BER_002",
+      "name": "Friedrichshain-Kreuzberg",
+      "area_km2": 20.16,
+      "population": 287000,
+      "density_per_km2": 14235,
+      "median_income": 42100,
+      "unemployment_rate": 0.094,
+      "housing_shortage_index": 0.31,
+      "healthcare_accessibility_score": 0.87,
+      "gentrification_pressure": 0.82,
+      "public_transport_score": 0.92,
+      "allocation_priority_weight": 0.78
+    },
+    {
+      "district_id": "BER_003",
+      "name": "Pankow",
+      "area_km2": 103.07,
+      "population": 407000,
+      "density_per_km2": 3950,
+      "median_income": 58200,
+      "unemployment_rate": 0.062,
+      "housing_shortage_index": 0.18,
+      "healthcare_accessibility_score": 0.84,
+      "gentrification_pressure": 0.45,
+      "public_transport_score": 0.78,
+      "allocation_priority_weight": 0.72
+    },
+    {
+      "district_id": "BER_004",
+      "name": "Charlottenburg-Wilmersdorf",
+      "area_km2": 64.72,
+      "population": 340000,
+      "density_per_km2": 5253,
+      "median_income": 67800,
+      "unemployment_rate": 0.055,
+      "housing_shortage_index": 0.15,
+      "healthcare_accessibility_score": 0.93,
+      "gentrification_pressure": 0.38,
+      "public_transport_score": 0.89,
+      "allocation_priority_weight": 0.65
+    },
+    {
+      "district_id": "BER_005",
+      "name": "Spandau",
+      "area_km2": 91.91,
+      "population": 243000,
+      "density_per_km2": 2644,
+      "median_income": 52100,
+      "unemployment_rate": 0.078,
+      "housing_shortage_index": 0.12,
+      "healthcare_accessibility_score": 0.76,
+      "gentrification_pressure": 0.22,
+      "public_transport_score": 0.71,
+      "allocation_priority_weight": 0.58
+    }
+  ],
+  "housing_units": [
+    {
+      "unit_id": "HU_001",
+      "district_id": "BER_001",
+      "address": "Alexanderplatz 12, 10178 Berlin",
+      "type": "apartment",
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "square_meters": 68,
+      "rent_euro_monthly": 1280,
+      "rent_per_sqm": 18.82,
+      "year_built": 1995,
+      "energy_efficiency_class": "C",
+      "accessibility_features": [
+        "wheelchair_accessible",
+        "elevator"
+      ],
+      "public_transport_distance_m": 150,
+      "healthcare_distance_m": 800,
+      "school_distance_m": 450,
+      "availability_status": "available",
+      "allocation_preference_score": 0.84,
+      "fair_allocation_weight": 1.15,
+      "zk_proof_hash": "0x3f7a9c2e8b1d4f6a9c2e8b1d4f6a9c2e",
+      "last_allocation_timestamp": "2025-06-15T10:30:00Z",
+      "tenant_turnover_rate": 0.12,
+      "maintenance_score": 0.88
+    },
+    {
+      "unit_id": "HU_002",
+      "district_id": "BER_002",
+      "address": "Warschauer Str. 45, 10243 Berlin",
+      "type": "apartment",
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "square_meters": 42,
+      "rent_euro_monthly": 950,
+      "rent_per_sqm": 22.62,
+      "year_built": 1889,
+      "energy_efficiency_class": "D",
+      "accessibility_features": [],
+      "public_transport_distance_m": 300,
+      "healthcare_distance_m": 1200,
+      "school_distance_m": 650,
+      "availability_status": "allocated",
+      "allocation_preference_score": 0.76,
+      "fair_allocation_weight": 1.28,
+      "zk_proof_hash": "0x8e4b7d2a5c9f1e6b8d2a5c9f1e6b8d2a",
+      "last_allocation_timestamp": "2025-07-22T14:45:00Z",
+      "tenant_turnover_rate": 0.18,
+      "maintenance_score": 0.71
+    },
+    {
+      "unit_id": "HU_003",
+      "district_id": "BER_003",
+      "address": "Prenzlauer Allee 89, 10405 Berlin",
+      "type": "apartment",
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "square_meters": 85,
+      "rent_euro_monthly": 1450,
+      "rent_per_sqm": 17.06,
+      "year_built": 2018,
+      "energy_efficiency_class": "A",
+      "accessibility_features": [
+        "elevator",
+        "handicap_parking"
+      ],
+      "public_transport_distance_m": 200,
+      "healthcare_distance_m": 950,
+      "school_distance_m": 320,
+      "availability_status": "available",
+      "allocation_preference_score": 0.91,
+      "fair_allocation_weight": 0.98,
+      "zk_proof_hash": "0x1a6c9e2b4f8d7c3a6e2b4f8d7c3a6e2b",
+      "last_allocation_timestamp": null,
+      "tenant_turnover_rate": 0.08,
+      "maintenance_score": 0.96
+    },
+    {
+      "unit_id": "HU_004",
+      "district_id": "BER_004",
+      "address": "Kantstraße 156, 10623 Berlin",
+      "type": "apartment",
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "square_meters": 110,
+      "rent_euro_monthly": 2100,
+      "rent_per_sqm": 19.09,
+      "year_built": 1925,
+      "energy_efficiency_class": "C",
+      "accessibility_features": [
+        "elevator"
+      ],
+      "public_transport_distance_m": 180,
+      "healthcare_distance_m": 600,
+      "school_distance_m": 380,
+      "availability_status": "maintenance",
+      "allocation_preference_score": 0.82,
+      "fair_allocation_weight": 0.85,
+      "zk_proof_hash": "0x7b2f5e8c1a4d9b6f5e8c1a4d9b6f5e8c",
+      "last_allocation_timestamp": "2025-04-10T09:15:00Z",
+      "tenant_turnover_rate": 0.05,
+      "maintenance_score": 0.79
+    },
+    {
+      "unit_id": "HU_005",
+      "district_id": "BER_005",
+      "address": "Falkenhagener Feld 23, 13589 Berlin",
+      "type": "house",
+      "bedrooms": 5,
+      "bathrooms": 3,
+      "square_meters": 145,
+      "rent_euro_monthly": 1780,
+      "rent_per_sqm": 12.28,
+      "year_built": 2005,
+      "energy_efficiency_class": "B",
+      "accessibility_features": [
+        "ground_floor_access",
+        "wide_doorways"
+      ],
+      "public_transport_distance_m": 800,
+      "healthcare_distance_m": 1500,
+      "school_distance_m": 600,
+      "availability_status": "available",
+      "allocation_preference_score": 0.73,
+      "fair_allocation_weight": 1.05,
+      "zk_proof_hash": "0x4d8f2c7a9e5b3d8f2c7a9e5b3d8f2c7a",
+      "last_allocation_timestamp": null,
+      "tenant_turnover_rate": 0.03,
+      "maintenance_score": 0.91
+    }
+  ],
+  "healthcare_facilities": [
+    {
+      "facility_id": "HF_001",
+      "name": "Charité - Campus Mitte",
+      "district_id": "BER_001",
+      "type": "university_hospital",
+      "address": "Charitéplatz 1, 10117 Berlin",
+      "capacity_beds": 1450,
+      "specializations": [
+        "cardiology",
+        "neurology",
+        "oncology",
+        "emergency",
+        "pediatrics",
+        "surgery"
+      ],
+      "staff_count": 3200,
+      "patient_satisfaction_score": 0.89,
+      "accessibility_rating": 0.94,
+      "allocation_slots_available": 145,
+      "appointment_wait_days_average": 12,
+      "emergency_response_time_minutes": 8,
+      "allocation_priority_weight": 0.95,
+      "fairness_distribution_factor": 1.2,
+      "zk_verification_hash": "0x9c3e7f1b5a8d2c6e7f1b5a8d2c6e7f1b",
+      "insurance_accepted": [
+        "statutory",
+        "private",
+        "international"
+      ],
+      "language_support": [
+        "german",
+        "english",
+        "turkish",
+        "arabic",
+        "russian"
+      ]
+    },
+    {
+      "facility_id": "HF_002",
+      "name": "Vivantes Klinikum im Friedrichshain",
+      "district_id": "BER_002",
+      "type": "public_hospital",
+      "address": "Landsberger Allee 49, 10249 Berlin",
+      "capacity_beds": 680,
+      "specializations": [
+        "internal_medicine",
+        "surgery",
+        "gynecology",
+        "emergency",
+        "geriatrics"
+      ],
+      "staff_count": 1800,
+      "patient_satisfaction_score": 0.84,
+      "accessibility_rating": 0.87,
+      "allocation_slots_available": 68,
+      "appointment_wait_days_average": 18,
+      "emergency_response_time_minutes": 11,
+      "allocation_priority_weight": 0.82,
+      "fairness_distribution_factor": 1.35,
+      "zk_verification_hash": "0x2a8f4d7c9e3b6a2f4d7c9e3b6a2f4d7c",
+      "insurance_accepted": [
+        "statutory",
+        "private"
+      ],
+      "language_support": [
+        "german",
+        "english",
+        "polish",
+        "vietnamese"
+      ]
+    },
+    {
+      "facility_id": "HF_003",
+      "name": "Helios Klinikum Berlin-Buch",
+      "district_id": "BER_003",
+      "type": "private_hospital",
+      "address": "Schwanebecker Chaussee 50, 13125 Berlin",
+      "capacity_beds": 1020,
+      "specializations": [
+        "oncology",
+        "cardiology",
+        "neurosurgery",
+        "transplantation",
+        "rehabilitation"
+      ],
+      "staff_count": 2400,
+      "patient_satisfaction_score": 0.91,
+      "accessibility_rating": 0.89,
+      "allocation_slots_available": 102,
+      "appointment_wait_days_average": 8,
+      "emergency_response_time_minutes": 15,
+      "allocation_priority_weight": 0.88,
+      "fairness_distribution_factor": 0.95,
+      "zk_verification_hash": "0x5e1b8c4f7a2d9e5b8c4f7a2d9e5b8c4f",
+      "insurance_accepted": [
+        "private",
+        "international",
+        "statutory_premium"
+      ],
+      "language_support": [
+        "german",
+        "english",
+        "french",
+        "spanish"
+      ]
+    },
+    {
+      "facility_id": "HF_004",
+      "name": "Gemeinschaftskrankenhaus Havelhöhe",
+      "district_id": "BER_005",
+      "type": "community_hospital",
+      "address": "Kladower Damm 221, 14089 Berlin",
+      "capacity_beds": 340,
+      "specializations": [
+        "integrative_medicine",
+        "internal_medicine",
+        "surgery",
+        "pediatrics"
+      ],
+      "staff_count": 950,
+      "patient_satisfaction_score": 0.87,
+      "accessibility_rating": 0.81,
+      "allocation_slots_available": 34,
+      "appointment_wait_days_average": 14,
+      "emergency_response_time_minutes": 18,
+      "allocation_priority_weight": 0.75,
+      "fairness_distribution_factor": 1.25,
+      "zk_verification_hash": "0x8d6a3f9c2e7b5d8a3f9c2e7b5d8a3f9c",
+      "insurance_accepted": [
+        "statutory",
+        "private"
+      ],
+      "language_support": [
+        "german",
+        "english"
+      ]
+    }
+  ],
+  "demographic_groups": [
+    {
+      "group_id": "DG_001",
+      "name": "Young Professionals",
+      "age_range": "25-35",
+      "income_range_euro": [
+        35000,
+        65000
+      ],
+      "household_size_average": 1.8,
+      "housing_preferences": [
+        "central_location",
+        "public_transport",
+        "modern_amenities"
+      ],
+      "healthcare_needs": [
+        "preventive_care",
+        "mental_health",
+        "reproductive_health"
+      ],
+      "allocation_priority": 0.75,
+      "population_percentage": 0.22,
+      "vulnerability_score": 0.35,
+      "fairness_weight": 1.08,
+      "mobility_factor": 0.85,
+      "integration_requirements": [
+        "language_support",
+        "cultural_adaptation"
+      ]
+    },
+    {
+      "group_id": "DG_002",
+      "name": "Families with Children",
+      "age_range": "30-50",
+      "income_range_euro": [
+        40000,
+        85000
+      ],
+      "household_size_average": 3.4,
+      "housing_preferences": [
+        "space",
+        "schools_nearby",
+        "safe_neighborhood",
+        "family_amenities"
+      ],
+      "healthcare_needs": [
+        "pediatrics",
+        "family_medicine",
+        "emergency_access"
+      ],
+      "allocation_priority": 0.88,
+      "population_percentage": 0.31,
+      "vulnerability_score": 0.42,
+      "fairness_weight": 1.25,
+      "mobility_factor": 0.65,
+      "integration_requirements": [
+        "school_access",
+        "community_services"
+      ]
+    },
+    {
+      "group_id": "DG_003",
+      "name": "Senior Citizens",
+      "age_range": "65+",
+      "income_range_euro": [
+        25000,
+        45000
+      ],
+      "household_size_average": 1.4,
+      "housing_preferences": [
+        "accessibility",
+        "healthcare_proximity",
+        "public_transport",
+        "ground_floor"
+      ],
+      "healthcare_needs": [
+        "geriatrics",
+        "chronic_care",
+        "emergency_access",
+        "regular_checkups"
+      ],
+      "allocation_priority": 0.95,
+      "population_percentage": 0.19,
+      "vulnerability_score": 0.78,
+      "fairness_weight": 1.45,
+      "mobility_factor": 0.35,
+      "integration_requirements": [
+        "mobility_support",
+        "social_services"
+      ]
+    },
+    {
+      "group_id": "DG_004",
+      "name": "Students",
+      "age_range": "18-28",
+      "income_range_euro": [
+        12000,
+        25000
+      ],
+      "household_size_average": 1.2,
+      "housing_preferences": [
+        "affordable",
+        "university_proximity",
+        "shared_living",
+        "public_transport"
+      ],
+      "healthcare_needs": [
+        "basic_care",
+        "mental_health",
+        "emergency"
+      ],
+      "allocation_priority": 0.68,
+      "population_percentage": 0.15,
+      "vulnerability_score": 0.52,
+      "fairness_weight": 1.35,
+      "mobility_factor": 0.92,
+      "integration_requirements": [
+        "education_support",
+        "financial_assistance"
+      ]
+    },
+    {
+      "group_id": "DG_005",
+      "name": "Recent Immigrants",
+      "age_range": "20-45",
+      "income_range_euro": [
+        18000,
+        40000
+      ],
+      "household_size_average": 2.6,
+      "housing_preferences": [
+        "affordable",
+        "community_support",
+        "public_transport",
+        "cultural_proximity"
+      ],
+      "healthcare_needs": [
+        "comprehensive_care",
+        "language_support",
+        "preventive_care"
+      ],
+      "allocation_priority": 0.92,
+      "population_percentage": 0.13,
+      "vulnerability_score": 0.82,
+      "fairness_weight": 1.55,
+      "mobility_factor": 0.45,
+      "integration_requirements": [
+        "language_services",
+        "legal_assistance",
+        "cultural_orientation"
+      ]
+    }
+  ],
+  "allocation_scenarios": [
+    {
+      "scenario_id": "AS_001",
+      "name": "Standard Fair Allocation",
+      "description": "Baseline allocation using current fairness parameters",
+      "allocation_algorithm": "weighted_ergodic_fair",
+      "parameters": {
+        "fairness_constraint": 0.95,
+        "efficiency_weight": 0.8,
+        "equity_weight": 1.2,
+        "temporal_smoothing": 0.15,
+        "convergence_tolerance": 0.001
+      },
+      "expected_outcomes": {
+        "allocation_success_rate": 0.87,
+        "fairness_deviation": 0.03,
+        "resource_utilization": 0.94,
+        "user_satisfaction": 0.82
+      },
+      "zk_proof_requirements": {
+        "privacy_level": "high",
+        "verification_rounds": 3,
+        "proof_size_kb": 2.4,
+        "verification_time_ms": 180
+      }
+    },
+    {
+      "scenario_id": "AS_002",
+      "name": "Emergency Priority Allocation",
+      "description": "Allocation optimized for emergency situations and vulnerable populations",
+      "allocation_algorithm": "priority_weighted_fair",
+      "parameters": {
+        "fairness_constraint": 0.85,
+        "efficiency_weight": 0.6,
+        "equity_weight": 1.8,
+        "emergency_multiplier": 2.5,
+        "vulnerability_boost": 1.4
+      },
+      "expected_outcomes": {
+        "allocation_success_rate": 0.92,
+        "fairness_deviation": 0.08,
+        "resource_utilization": 0.88,
+        "user_satisfaction": 0.89
+      },
+      "zk_proof_requirements": {
+        "privacy_level": "maximum",
+        "verification_rounds": 5,
+        "proof_size_kb": 3.8,
+        "verification_time_ms": 320
+      }
+    }
+  ],
+  "historical_allocations": [
+    {
+      "allocation_id": "HA_001",
+      "timestamp": "2025-06-15T10:30:00Z",
+      "resource_type": "housing",
+      "resource_id": "HU_001",
+      "recipient_group": "DG_003",
+      "allocation_score": 0.94,
+      "fairness_metric": 0.91,
+      "proof_verified": true,
+      "satisfaction_rating": 4.2,
+      "dispute_filed": false
+    },
+    {
+      "allocation_id": "HA_002",
+      "timestamp": "2025-07-22T14:45:00Z",
+      "resource_type": "housing",
+      "resource_id": "HU_002",
+      "recipient_group": "DG_001",
+      "allocation_score": 0.78,
+      "fairness_metric": 0.85,
+      "proof_verified": true,
+      "satisfaction_rating": 3.8,
+      "dispute_filed": false
+    },
+    {
+      "allocation_id": "HA_003",
+      "timestamp": "2025-08-10T09:20:00Z",
+      "resource_type": "healthcare",
+      "resource_id": "HF_001",
+      "recipient_group": "DG_002",
+      "allocation_score": 0.89,
+      "fairness_metric": 0.93,
+      "proof_verified": true,
+      "satisfaction_rating": 4.5,
+      "dispute_filed": false
+    }
+  ],
+  "system_configuration": {
+    "version": "1.2.3",
+    "last_updated": "2025-09-21T13:31:00+01:00",
+    "cryptographic_parameters": {
+      "hash_function": "SHA-256",
+      "zk_scheme": "Groth16",
+      "proof_system": "Halo2",
+      "commitment_scheme": "Pedersen",
+      "randomness_source": "Chacha20"
+    },
+    "fairness_parameters": {
+      "alpha_fairness": 1.0,
+      "max_deviation_threshold": 0.1,
+      "temporal_smoothing_window": 30,
+      "drift_correction_factor": 0.02,
+      "convergence_check_interval": 24
+    },
+    "allocation_weights": {
+      "geographic_proximity": 0.25,
+      "socioeconomic_need": 0.35,
+      "vulnerability_status": 0.2,
+      "resource_compatibility": 0.15,
+      "temporal_priority": 0.05
+    },
+    "privacy_settings": {
+      "data_anonymization_level": "high",
+      "proof_aggregation": true,
+      "batch_verification": true,
+      "zero_knowledge_enabled": true,
+      "differential_privacy_epsilon": 0.1
+    }
+  },
+  "monitoring_metrics": {
+    "system_health": {
+      "uptime_percentage": 99.7,
+      "average_response_time_ms": 245,
+      "error_rate": 0.003,
+      "throughput_allocations_per_hour": 156,
+      "data_integrity_score": 0.999
+    },
+    "fairness_metrics": {
+      "gini_coefficient": 0.28,
+      "theil_index": 0.15,
+      "coefficient_of_variation": 0.22,
+      "fairness_violations_count": 2,
+      "equity_score": 0.91
+    },
+    "efficiency_metrics": {
+      "resource_utilization_rate": 0.94,
+      "allocation_success_rate": 0.87,
+      "average_allocation_time_hours": 8.5,
+      "rescheduling_rate": 0.12,
+      "waste_minimization_score": 0.88
+    },
+    "user_satisfaction": {
+      "overall_rating": 4.1,
+      "complaint_rate": 0.08,
+      "repeat_usage_rate": 0.73,
+      "recommendation_score": 0.82,
+      "accessibility_rating": 0.89
+    }
+  }
+}
