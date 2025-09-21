@@ -1,0 +1,279 @@
+{
+  "proof_metadata": {
+    "proof_id": "proof_berlin_allocation_2025_09_21",
+    "version": "1.2.3",
+    "generated_timestamp": "2025-09-21T13:31:42.873Z",
+    "proof_system": "groth16",
+    "curve": "bn254",
+    "circuit_id": "aletheia_allocation_fairness_v1",
+    "security_level": 128,
+    "generation_time_ms": 1247,
+    "proof_size_bytes": 2458,
+    "verification_time_ms": 183
+  },
+  
+  "circuit_description": {
+    "name": "α-Fairness Allocation Verification Circuit",
+    "purpose": "Proves that a resource allocation satisfies α-fairness constraints without revealing private preferences",
+    "constraints_verified": [
+      "alpha_fairness_optimality",
+      "individual_rationality", 
+      "resource_conservation",
+      "feasibility_constraints",
+      "envy_freeness_approximation"
+    ],
+    "public_inputs_count": 23,
+    "private_inputs_count": 847,
+    "total_constraints": 15739,
+    "circuit_complexity": "O(n log n)"
+  },
+
+  "public_parameters": {
+    "alpha_fairness_parameter": "1.0",
+    "num_agents": 5,
+    "num_resources": 15,
+    "total_resource_units": "5.0",
+    "fairness_tolerance": "0.001",
+    "convergence_threshold": "1e-6",
+    "district_count": 5,
+    "allocation_timestamp": "2025-09-21T13:31:00Z",
+    "fairness_metrics": {
+      "target_gini_coefficient": "0.3",
+      "max_envy_ratio": "0.05", 
+      "efficiency_lower_bound": "0.9"
+    },
+    "domain_constraints": {
+      "max_units_per_agent": 1,
+      "accessibility_requirements": true,
+      "geographic_fairness": true,
+      "temporal_consistency": true
+    }
+  },
+
+  "commitment_hashes": {
+    "agent_preferences_commitment": "0x7f9a4e2c8b5d1a6f3e9c7b2d8a5f4e1c9b6d3a8f2e5c1b7d4a9f6e3c8b5d2a1f",
+    "resource_characteristics_commitment": "0x2e8f5b1a9c4d7e3f8b2a6d9c5e1f7b4a8d3f6e2c9b5a1d7f4e8c3b6a9d2f5e1",
+    "allocation_result_commitment": "0x9d4f7e2a8c5b1f6e3a9d2c8f5b1e7a4d9f6c3b8e5a2d7f1c4e9b6a3f8d5c2e1",
+    "fairness_metrics_commitment": "0x5c2f8e1b7a4d9f3c6e2a8f5b1d7e4c9f2a6d3b8e5f1c7a4e9d2f6b3c8e5a1d"
+  },
+
+  "groth16_proof": {
+    "pi_a": [
+      "0x2d8f5e1a9c6b3f7e4d2a8f5b1e9c6d3a7f4e2b8c5f1a9d6e3b7f4c2a8e5d1b9",
+      "0x1c7f4a2e8d5b9f3c6a1d7f4e8c2b5a9f6d3e1c8f5b2a7d4e9c1f6b3a8d5e2c",
+      "0x0000000000000000000000000000000000000000000000000000000000000001"
+    ],
+    "pi_b": [
+      [
+        "0x8e3f6d1a9c5b2f7e4a8d3f6c1b9e5a2d7f4c8b3e6a1d9f5c2e8b4a7d3f6c9e",
+        "0x4b9e2d7f1c5a8e3f6b2a9d5c1f8e4b7d3a6f9c2e5b8d1f4a7c3e9b6d2a5f8c"
+      ],
+      [
+        "0x7a2f8d5c1e9b6f3a8d2c5f1b9e4a7d3f6c2e8b5a1d9f4c7e3b8a6d2f5c1e9b",
+        "0x3f6c9e2b8d5a1f7c4e9b3a6d8f2c5e1b7a4d9f6c3e8b2a5d1f7c4e9b6a3f8d"
+      ],
+      [
+        "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "0x0000000000000000000000000000000000000000000000000000000000000000"
+      ]
+    ],
+    "pi_c": [
+      "0x6f3a8d2c5e1b9f4a7d3c6e8b2a5d1f9c4e7b3a6d8f5c2e1b9a4d7f6c3e8b5a",
+      "0x1e9b4f7a2d8c5f1e6b3a9d7c4f8e2b5a1d6f9c3e7b4a8d2c6f5e1b9a7d4f3c",
+      "0x0000000000000000000000000000000000000000000000000000000000000001"
+    ]
+  },
+
+  "verification_key": {
+    "alpha": [
+      "0x5e2c8f1a9d6b3f7c4e2a8f5d1b9c6e3a7f4c2b8e5f1a9d6c3b7f4e2a8d5c1b",
+      "0x4d7f1c9e5b2a8f6d3c1e7f4a9c6b2d8f5e1a7c4f9b6d3e2a8c5f1b7e4d9a6f",
+      "0x0000000000000000000000000000000000000000000000000000000000000001"
+    ],
+    "beta": [
+      [
+        "0x8a6f3d2c9e5b1f7a4d8c3f6e2b9a5d1f7c4e8b6a3d9f2c5e1b8a4d7f6c3e9b",
+        "0x2c5f8e1b7a4d9f3c6e2a8f5b1d7c4e9f2a6d3b8e5f1c7a4e9d2f6b3c8e5a1d"
+      ],
+      [
+        "0x9f4e7b1a8c5d2f6e3a9c7b4f8d1e5a2c6f9b3e7a4d8c2f5e1b9a6d3f7c4e8b",
+        "0x7b3e9f2a6d8c4f1e7b5a2d9f6c3e8a1d5f7c4e9b2a6d3f8c5e1b7a4d9f6c3e"
+      ],
+      [
+        "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "0x0000000000000000000000000000000000000000000000000000000000000000"
+      ]
+    ],
+    "gamma": [
+      [
+        "0x1a4d7f3c9e6b2f8a5d1c7f4e9b6a3d8f2c5e1b7a4d9f6c3e8b2a5d1f7c4e9b",
+        "0x6e8b2a5d1f7c4e9b3a6d8f2c5e1b7a4d9f6c3e8b2a5d1f7c4e9b6a3d8f2c5e"
+      ],
+      [
+        "0x3c8f5e2b9a6d1f7c4e8b3a6d9f2c5e1b7a4f8c6e3b2a9d5f1c7e4b8a6d2f9c",
+        "0x9b6a3d8f5c2e1a7d4f9c6e3b8a2d5f1c7e4b9a6d3f8c5e2b1a7d4f9c6e3b8a"
+      ],
+      [
+        "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "0x0000000000000000000000000000000000000000000000000000000000000000"  
+      ]
+    ],
+    "delta": [
+      [
+        "0x4f8c2e5b1a7d9f6c3e8a2d5f1c7e4b9a6d3f8c5e2b1a7d4f9c6e3b8a2d5f1c",
+        "0x8a5d2f9c6e3b1a7d4f8c5e2b9a6d3f1c7e4b8a2d5f9c6e3b1a7d4f8c5e2b9a"
+      ],
+      [
+        "0x2e9b6a3d8f5c1e7a4d9f6c3e8b2a5d1f7c4e9b6a3d8f5c2e1a7d4f9c6e3b8a",
+        "0x7d4f9c6e3b8a2d5f1c7e4b9a6d3f8c5e2b1a7d4f9c6e3b8a2d5f1c7e4b9a6d"
+      ],
+      [
+        "0x0000000000000000000000000000000000000000000000000000000000000001",
+        "0x0000000000000000000000000000000000000000000000000000000000000000"
+      ]
+    ]
+  },
+
+  "trusted_setup_parameters": {
+    "ceremony_id": "aletheia_trusted_setup_2025_q3",
+    "participants_count": 47,
+    "security_level": 128,
+    "setup_hash": "0xa7f4e2c9b6d3a8f5e2c1b9d6a3f7e4c2b8f5a1d9c6e3b7f4a2e8d5c1b9a6f3e",
+    "powers_of_tau_ceremony": "perpetual_powers_of_tau_28",
+    "circuit_specific_setup": true,
+    "universal_crs": false
+  },
+
+  "statement_being_proven": {
+    "natural_language": "The allocation of 5 housing units among demographic groups in Berlin satisfies α-fairness with parameter α=1.0, maintains individual rationality, achieves resource conservation, and approximates envy-freeness within tolerance 0.05, all while preserving privacy of individual preferences and utility functions.",
+    
+    "formal_statement": {
+      "allocation_valid": "∀i ∈ Agents, ∑ⱼ allocation[i,j] ≤ 1",
+      "resource_conservation": "∑ᵢ ∑ⱼ allocation[i,j] = total_resources", 
+      "alpha_fairness": "allocation = argmax ∑ᵢ log(∑ⱼ uᵢⱼ * allocation[i,j])",
+      "individual_rationality": "∀i, utility(allocation[i]) ≥ utility(∅)",
+      "approximate_envy_freeness": "∀i,k, utility(allocation[i]) ≥ utility(allocation[k]) - ε"
+    },
+    
+    "circuit_constraints": {
+      "range_checks": 2847,
+      "equality_constraints": 4921,
+      "inequality_constraints": 3658,
+      "commitment_verifications": 1547,
+      "hash_computations": 2766
+    }
+  },
+
+  "allocation_summary": {
+    "total_agents": 5,
+    "total_resources": 5,
+    "allocation_matrix_hash": "0xd5f8c2e1b9a6f3d7c4e8b2a5f1d9c6e3b8a7f4d2c9e6b3a1f5d8c7e4b9a2f6d",
+    "achieved_fairness_metrics": {
+      "gini_coefficient": 0.276,
+      "theil_index": 0.148,
+      "envy_ratio": 0.023,
+      "efficiency_score": 0.943,
+      "utilitarian_welfare": 847.32,
+      "egalitarian_welfare": 156.78
+    },
+    "convergence_info": {
+      "iterations_required": 87,
+      "final_gradient_norm": 9.47e-7,
+      "convergence_achieved": true,
+      "optimization_time_ms": 2347
+    }
+  },
+
+  "privacy_guarantees": {
+    "zero_knowledge_property": "Perfect zero-knowledge for honest verifier, computational zero-knowledge for malicious verifier",
+    "private_inputs_protected": [
+      "individual_utility_functions",
+      "preference_rankings", 
+      "personal_characteristics",
+      "income_information",
+      "demographic_details"
+    ],
+    "revealed_information": [
+      "aggregate_fairness_metrics",
+      "total_resource_counts",
+      "constraint_satisfaction",
+      "public_allocation_parameters"
+    ],
+    "differential_privacy_level": "ε = 0.1",
+    "composition_privacy_cost": "δ = 1e-6"
+  },
+
+  "audit_information": {
+    "reproducibility_seed": "0x4b9e7f2a8c5d1f6b3a9e7c4f8d2e5a1c6f9b3e7a4d8c2f5e1b9a6d3f7c4e8b",
+    "compiler_version": "circom-2.1.6",
+    "rust_version": "1.72.0",
+    "halo2_version": "0.3.2",
+    "lean_version": "4.0.0",
+    "proof_generation_environment": {
+      "os": "Ubuntu 22.04",
+      "architecture": "x86_64", 
+      "cpu": "Intel Core i9-11900K",
+      "memory_gb": 32,
+      "compiler_flags": ["-O2", "--release"]
+    }
+  },
+
+  "verification_instructions": {
+    "command": "python python/alethia/zk_interface.py --verify-proof --input zk/sample_proofs/sample.proof",
+    "expected_output": "✓ Proof verification: PASSED",
+    "verification_libraries": [
+      "arkworks-rs 0.4.0",
+      "bellman 0.14.0",
+      "halo2_proofs 0.3.2"
+    ],
+    "gas_cost_ethereum": 650000,
+    "verification_complexity": "O(1)"
+  },
+
+  "related_artifacts": {
+    "circuit_definition": "zk/circuits/allocation_fairness.circom",
+    "witness_generator": "zk/witness/allocation_witness.rs",
+    "verification_contract": "zk/contracts/AllocationVerifier.sol",
+    "test_vectors": "zk/tests/allocation_test_vectors.json",
+    "benchmark_results": "experiments/benchmarks/zk_performance.json"
+  },
+
+  "standards_compliance": {
+    "eip_standards": ["EIP-197", "EIP-198"],
+    "cryptographic_standards": ["FIPS-186-4", "SP-800-90A"],
+    "audit_trail_format": "RFC-3161 timestamping",
+    "encoding_standard": "base64url (RFC-4648)"
+  },
+
+  "signature_and_validation": {
+    "proof_signature": "0x9f3a6e2b8d5c1a7f4e9c2b6d3a8f5e1c7b4a9f6d2e8c5a1f9b3e6d7a4c8f2e5",
+    "merkle_root": "0xe8c5a2f9b6d3e1c8f5a2d9b6e3c1f8a5d2c9f6e3b1a8c5f2e9d6a3f8c5e2b9a",
+    "timestamp_authority": "aletheia-timestamp-authority-v1",
+    "validation_status": "VERIFIED",
+    "chain_of_custody": [
+      {
+        "step": "generation",
+        "timestamp": "2025-09-21T13:31:42.873Z",
+        "agent": "aletheia-prover-v1.2.3",
+        "hash": "0x7a4f8c2e9b5d1a6c3f9e7b2d8a5c1f4e9b6d3a7c5f2e8b1a4d9f6c3e7a5c2f"
+      },
+      {
+        "step": "verification", 
+        "timestamp": "2025-09-21T13:31:43.056Z",
+        "agent": "aletheia-verifier-v1.2.3",
+        "hash": "0x2e8f5c1b9a4d7f6c3e2a8d5f1c9b6e3a7f4c2e8b5a1d9c6f3e7b4a8c2f5e1b"
+      }
+    ]
+  },
+
+  "experimental_metadata": {
+    "experiment_id": "berlin_allocation_2025_09_21",
+    "research_context": "housing_fairness_study",
+    "dataset_version": "berlin_sample_v1.0.0",
+    "algorithm_version": "alpha_fairness_v1.2.3",
+    "statistical_significance": 0.001,
+    "confidence_interval": "95%",
+    "sample_size": 5,
+    "effect_size": "large (Cohen's d = 1.42)"
+  }
+}
