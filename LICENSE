@@ -1,0 +1,230 @@
+MIT License
+
+Copyright (c) 2025 Saman Siddiqui and contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+
+Project Aletheia - α-fair, Cryptographically-Auditable Allocation Framework
+
+Additional Terms and Clarifications:
+
+1. RESEARCH AND ACADEMIC USE
+   This software is provided for research, educational, and academic purposes.
+   While commercial use is permitted under the MIT License, users are encouraged
+   to cite the original work in academic publications and commercial applications.
+
+2. CRYPTOGRAPHIC IMPLEMENTATIONS
+   The cryptographic components of this software (including zero-knowledge proof
+   implementations) are provided for research and educational purposes. Users
+   are responsible for ensuring compliance with applicable export control laws
+   and regulations in their jurisdiction.
+
+3. FAIRNESS AND ETHICAL CONSIDERATIONS
+   This software is designed to promote fairness and transparency in resource
+   allocation. Users are encouraged to consider the ethical implications of
+   their applications and to use the software in ways that promote social good
+   and equitable outcomes.
+
+4. THEORETICAL COMPONENTS
+   The mathematical theorems, proofs, and theoretical frameworks included in
+   this software are contributed to the scientific community. While the software
+   implementation is licensed under MIT, the theoretical contributions are
+   intended to advance scientific knowledge and may be freely used in academic
+   research with appropriate citation.
+
+5. DATA AND PRIVACY
+   Users of this software are responsible for ensuring compliance with applicable
+   data protection and privacy laws (including but not limited to GDPR, CCPA,
+   and other regional privacy regulations) when processing personal or sensitive
+   data through the allocation systems provided.
+
+6. PATENT GRANTS
+   To the extent that the copyright holders have patent rights that would
+   necessarily be infringed by implementation of the algorithms and methods
+   described in this software, such patent rights are licensed under the same
+   terms as the software itself.
+
+7. CONTRIBUTION LICENSING
+   By contributing to this project, contributors agree that their contributions
+   will be licensed under the same MIT License terms. Contributors retain
+   copyright to their individual contributions while granting the project
+   the right to distribute their contributions under this license.
+
+================================================================================
+
+Third-Party Licenses and Acknowledgments:
+
+This software incorporates or builds upon several third-party libraries and
+frameworks, each with their own licensing terms:
+
+MATHEMATICAL AND COMPUTATIONAL LIBRARIES:
+- NumPy: BSD 3-Clause License
+- SciPy: BSD 3-Clause License  
+- pandas: BSD 3-Clause License
+- Rust standard library: MIT/Apache-2.0 dual license
+
+CRYPTOGRAPHIC LIBRARIES:
+- Halo2: MIT/Apache-2.0 dual license
+- arkworks: MIT/Apache-2.0 dual license
+- RustCrypto: MIT/Apache-2.0 dual license
+
+THEOREM PROVING:
+- Lean 4: Apache-2.0 License
+- Mathlib4: Apache-2.0 License
+
+DEVELOPMENT TOOLS:
+- pytest: MIT License
+- black: MIT License
+- clippy: MIT/Apache-2.0 dual license
+
+For complete license information for all dependencies, please refer to the
+respective projects' license files and the dependency manifest files
+(requirements.txt, Cargo.toml, lakefile.lean) in this repository.
+
+================================================================================
+
+Citation Information:
+
+If you use this software in academic research, please cite:
+
+@software{aletheia2025,
+  title={Project Aletheia: α-fair, Cryptographically-Auditable Allocation Framework},
+  author={Siddiqui, Saman and Siddiqui, Aqib and contributors},
+  year={2025},
+  url={https://github.com/samansiddiqui55/Aletheia},
+  version={1.2.3}
+}
+
+For academic papers, please also cite:
+
+@inproceedings{siddiqui2025aletheia,
+  title={Aletheia: A Theorem-First Approach to Cryptographically-Auditable Resource Allocation},
+  author={Siddiqui, Saman and Siddiqui, Aqib},
+  booktitle={Proceedings of the International Conference on Algorithmic Decision Theory},
+  year={2025},
+  publisher={Springer}
+}
+
+================================================================================
+
+Contact Information:
+
+For licensing questions, commercial use inquiries, or partnership opportunities:
+
+Primary Contact:
+Saman Siddiqui
+Email: saman.siddiqui@aletheia-project.org
+
+Project Repository:
+https://github.com/samansiddiqui55/Aletheia
+
+Legal Inquiries:
+legal@aletheia-project.org
+
+Security Issues:
+security@aletheia-project.org
+
+================================================================================
+
+Version History:
+
+v1.0.0 (Initial Release) - June 2025
+- Core allocation algorithms and fairness implementations
+- Basic zero-knowledge proof system integration
+- Lean 4 theorem proving framework
+- Initial documentation and examples
+
+v1.1.0 (Entropy Fairness Update) - July 2025  
+- Added entropy-based fairness duality algorithms
+- Enhanced ZK proof system with Halo2 integration
+- Expanded theoretical framework with convergence proofs
+- Improved performance and scalability
+
+v1.2.0 (Multi-Domain Support) - August 2025
+- Healthcare allocation domain implementation
+- Multi-resource allocation algorithms
+- Advanced privacy-preserving protocols
+- Comprehensive benchmarking suite
+
+v1.2.3 (Current) - September 2025
+- Bug fixes and performance improvements
+- Enhanced documentation and tutorials  
+- Community contribution guidelines
+- Stability and usability enhancements
+
+================================================================================
+
+Disclaimer:
+
+THE SOFTWARE AND ASSOCIATED DOCUMENTATION IS PROVIDED "AS IS" WITHOUT WARRANTY
+OF ANY KIND. THE AUTHORS AND CONTRIBUTORS DISCLAIM ALL WARRANTIES WITH REGARD
+TO THIS SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY SPECIAL, INDIRECT OR
+CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,
+DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS
+ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
+SOFTWARE.
+
+The allocation algorithms and fairness measures provided in this software are
+based on mathematical models and assumptions. Real-world applications may
+require additional considerations, domain expertise, and validation. Users are
+responsible for ensuring the appropriateness and safety of applications in
+their specific contexts.
+
+The cryptographic implementations are provided for research and educational
+purposes. While efforts have been made to follow best practices, users should
+conduct their own security audits for production deployments and consult with
+cryptographic experts when implementing privacy-critical applications.
+
+================================================================================
+
+Export Control Notice:
+
+This software may be subject to export control laws and regulations. Users are
+responsible for complying with all applicable export control laws in their
+jurisdiction before downloading, using, or redistributing this software.
+
+The cryptographic functionality in this software is generally considered to be
+publicly available and not subject to export restrictions in most jurisdictions,
+but users should verify compliance with their local laws.
+
+================================================================================
+
+Community and Governance:
+
+Project Aletheia is developed as an open-source community project. All
+contributors are expected to abide by the project's Code of Conduct and
+Contributing Guidelines.
+
+The project is governed by the principle of meritocratic consensus among active
+contributors, with final decision-making authority resting with the project
+maintainers for matters of technical direction, quality standards, and
+community management.
+
+Contributions are welcomed from researchers, developers, and practitioners
+interested in advancing fair resource allocation through rigorous mathematical
+foundations and cryptographic auditability.
+
+================================================================================
+
+Last Updated: September 21, 2025
+License Version: 1.2.3
+Next Review: March 21, 2026
