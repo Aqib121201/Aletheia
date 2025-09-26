@@ -1,24 +1,3 @@
-"""
-Project Aletheia - Core Allocation Algorithms
-
-This module implements the fundamental allocation algorithms with α-fairness guarantees,
-convergence analysis, and cryptographic auditability. All algorithms are based on
-formally verified theorems in Lean 4 and support zero-knowledge proof generation.
-
-Classes:
-    BaseAllocator: Abstract base class for all allocation algorithms
-    AlphaFairnessAllocator: Core α-fairness optimization algorithm
-    ProportionalFairnessAllocator: Specialized proportional fairness (α=1)
-    MaxMinFairnessAllocator: Max-min fairness implementation (α→∞)
-    EntropyDualityAllocator: Information-theoretic fairness optimization
-    WeightedFairnessAllocator: Priority-weighted allocation with fairness constraints
-
-Example:
-    >>> allocator = AlphaFairnessAllocator(alpha=1.0, convergence_tolerance=1e-6)
-    >>> result = allocator.allocate(dataset)
-    >>> print(f"Gini coefficient: {result.fairness_metrics['gini_coefficient']}")
-"""
-
 import numpy as np
 import scipy.optimize
 from abc import ABC, abstractmethod
