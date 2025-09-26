@@ -1,24 +1,3 @@
-"""
-Project Aletheia - α-fair, Cryptographically-Auditable Allocation Framework
-
-A theorem-first approach to fair resource allocation uniting ergodic control,
-convex geometry, stochastic processes, and zero-knowledge proofs.
-
-Main components:
-- Allocation algorithms with α-fairness guarantees
-- Zero-knowledge proof generation and verification
-- Formal verification interfaces with Lean 4
-- Domain-specific applications (housing, healthcare)
-- Comprehensive fairness metrics and analysis tools
-
-Example usage:
-    >>> import aletheia as ale
-    >>> data = ale.load_dataset("berlin_housing")
-    >>> allocator = ale.AlphaFairnessAllocator(alpha=1.0)
-    >>> result = allocator.allocate(data)
-    >>> proof = ale.generate_zk_proof(result)
-"""
-
 import sys
 import warnings
 from pathlib import Path

@@ -1,25 +1,3 @@
-"""
-Project Aletheia - Fair Allocation Simulator
-
-This module provides the experimental and benchmarking simulation framework for
-evaluating α-fair, cryptographically-auditable allocation algorithms in housing,
-healthcare, and synthetic environments. It supports reproducible research, batch runs,
-parameter sweeps, result aggregation, and protocol-level audit integration.
-
-Classes:
-    AllocationSimulator: Runner for allocation experiments and benchmarks
-
-Example Usage:
-    >>> sim = AllocationSimulator(
-    ...     dataset_path="data/sample/berlin_sample.json",
-    ...     algorithms=["alpha_fairness", "entropy_duality"],
-    ...     runs=100,
-    ...     output_dir="experiments/results/"
-    ... )
-    >>> report = sim.run()
-    >>> sim.save_results(report)
-"""
-
 import os
 import json
 import time
