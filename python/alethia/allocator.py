@@ -837,3 +837,4 @@ def create_allocator(fairness_type: str, **kwargs) -> BaseAllocator:
         raise ValueError(f"Unsupported fairness type: {fairness_type}")
     
     return allocator_map[fairness_type](**kwargs)
+
