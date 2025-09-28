@@ -377,6 +377,20 @@ def quick_allocation(
             result["proof_verified"] = False
     
     return result
+def get_info() -> Dict[str, Any]:
+    """Get comprehensive package information."""
+    return {
+        "version": __version__,
+        "author": __author__,
+        "description": __description__,
+        "url": __url__,
+        "license": __license__,
+        "status": __status__,
+        "python_version": f"{sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}",
+        "supported_algorithms": SUPPORTED_ALGORITHMS,
+        "supported_zk_backends": SUPPORTED_ZK_BACKENDS,
+        "supported_domains": SUPPORTED_DOMAINS,
+    }
 
 def run_experiment(
     experiment_type: str,
