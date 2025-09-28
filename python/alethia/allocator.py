@@ -297,6 +297,7 @@ class BaseAllocator(ABC):
         
         if utilities.shape[0] == 0 or utilities.shape[1] == 0:
             raise ValueError("Utility matrix cannot be empty")
+    @staticmethod
     
     def _matrix_to_allocation_dict(self, 
                                  allocation_matrix: AllocationMatrix, 
@@ -310,6 +311,7 @@ class BaseAllocator(ABC):
                 if allocation_matrix[i, j] > 1e-10:  # Only include non-zero allocations
                     allocations[agent_id][resource_id] = float(allocation_matrix[i, j])
         return allocations
+    @staticmethod
     
     def _compute_agent_utilities(self, 
                                allocation_matrix: AllocationMatrix,
