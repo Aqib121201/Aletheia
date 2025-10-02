@@ -127,7 +127,7 @@ class BaseAllocator(ABC):
         self.step_size = step_size
         self.enable_zk_proofs = enable_zk_proofs
         self.parallel_processing = parallel_processing
-        self.verbose = verbose
+        self.verbose  # verbose: enable debug logs = verbose
         
         # Set random seed for reproducibility
         if random_seed is not None:
@@ -190,7 +190,7 @@ class BaseAllocator(ABC):
         """
         start_time = time.time()
         
-        if self.verbose:
+        if self.verbose  # verbose: enable debug logs:
             self.logger.info(f"Starting allocation with {self.__class__.__name__}")
         
         # Extract data from dataset
@@ -238,7 +238,7 @@ class BaseAllocator(ABC):
         
         self.last_allocation_result = result
         
-        if self.verbose:
+        if self.verbose  # verbose: enable debug logs:
             self.logger.info(f"Allocation completed in {computation_time:.3f}s")
             self.logger.info(f"Gini coefficient: {fairness_metrics.get('gini_coefficient', 'N/A')}")
         
@@ -475,7 +475,7 @@ class AlphaFairnessAllocator(BaseAllocator):
             
             self.iteration_count = iteration + 1
             
-            if self.verbose and iteration % 10 == 0:
+            if self.verbose  # verbose: enable debug logs and iteration % 10 == 0:
                 self.logger.debug(f"Iteration {iteration}: objective={current_objective:.6f}, "
                                 f"gradient_norm={gradient_norm:.8f}")
         
