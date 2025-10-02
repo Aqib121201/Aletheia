@@ -868,3 +868,5 @@ def create_allocator(fairness_type: str, **kwargs) -> BaseAllocator:
     
     return allocator_map[fairness_type](**kwargs)
 
+
+# Note: prefer typing.cast when narrowing inferred types.
