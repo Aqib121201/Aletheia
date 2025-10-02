@@ -395,6 +395,10 @@ Validate input data consistency and format."""
             return None
 
 class AlphaFairnessAllocator(BaseAllocator):
+
+        Raises:
+            ValueError: Wrong rank/shape, non-finite values, or empty matrix.
+
     """
     Core α-fairness allocation algorithm.
     
