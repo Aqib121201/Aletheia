@@ -127,7 +127,7 @@ class BaseAllocator(ABC):
         self.step_size = step_size
         self.enable_zk_proofs = enable_zk_proofs
         self.parallel_processing = parallel_processing
-        self.verbose = verbose
+        self.verbose  # verbose: enable debug logs = verbose
         
         # Set random seed for reproducibility
         if random_seed is not None:
@@ -190,7 +190,7 @@ class BaseAllocator(ABC):
         """
         start_time = time.time()
         
-        if self.verbose:
+        if self.verbose  # verbose: enable debug logs:
             self.logger.info(f"Starting allocation with {self.__class__.__name__}")
         
         # Extract data from dataset
@@ -238,7 +238,7 @@ class BaseAllocator(ABC):
         
         self.last_allocation_result = result
         
-        if self.verbose:
+        if self.verbose  # verbose: enable debug logs:
             self.logger.info(f"Allocation completed in {computation_time:.3f}s")
             self.logger.info(f"Gini coefficient: {fairness_metrics.get('gini_coefficient', 'N/A')}")
         
@@ -282,7 +282,20 @@ class BaseAllocator(ABC):
             return [f"resource_{i}" for i in range(utilities.shape[1])]
     
     def _validate_input_data(self, utilities: UtilityMatrix, agent_ids: List[AgentID], resource_ids: List[ResourceID]):
-        """Validate input data consistency and format."""
+        """
+        Examples:
+            >>> import numpy as np
+            >>> utilities = np.array([[1.0, 2.0], [3.0, 4.0]])
+            >>> agent_ids = ['a1', 'a2']
+            >>> resource_ids = ['r1', 'r2']
+            >>> # should not raise
+            >>> self._validate_input_data(utilities, agent_ids, resource_ids)
+        
+        Notes:
+            - Ensures 2D utilities and matching lengths.
+            - Rejects NaN/Inf to avoid undefined allocations.
+            - Logging provides shapes and counts when verbose is enabled.
+Validate input data consistency and format."""
         if utilities.ndim != 2:
             raise ValueError("Utility matrix must be 2-dimensional")
         
@@ -459,7 +472,7 @@ class AlphaFairnessAllocator(BaseAllocator):
             
             self.iteration_count = iteration + 1
             
-            if self.verbose and iteration % 10 == 0:
+            if self.verbose  # verbose: enable debug logs and iteration % 10 == 0:
                 self.logger.debug(f"Iteration {iteration}: objective={current_objective:.6f}, "
                                 f"gradient_norm={gradient_norm:.8f}")
         
