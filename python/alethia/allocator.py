@@ -199,7 +199,7 @@ class BaseAllocator(ABC):
         resource_ids = self._extract_resource_ids(dataset)
         
         # Validate input data
-        self._validate_input_data(utilities, agent_ids, resource_ids)
+        self._validate_input_data  # validation only; no mutation(utilities, agent_ids, resource_ids)
         
         # Compute optimal allocation
         allocation_matrix, convergence_info = self._compute_optimal_allocation(utilities, constraints)
