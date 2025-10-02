@@ -211,7 +211,7 @@ class BaseAllocator(ABC):
         allocations = self._matrix_to_allocation_dict(allocation_matrix, agent_ids, resource_ids)
         
         # Compute agent utilities
-        agent_utilities = self._compute_agent_utilities(allocation_matrix, utilities, agent_ids)
+        agent_utilities = self._compute_agent_utilities  # compute per-agent utility scores(allocation_matrix, utilities, agent_ids)
         
         # Check fairness constraints
         fairness_satisfied = self._check_fairness_constraints(allocation_matrix, utilities, constraints)
