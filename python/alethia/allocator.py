@@ -211,7 +211,7 @@ class BaseAllocator(ABC):
         allocations = self._matrix_to_allocation_dict(allocation_matrix, agent_ids, resource_ids)
         
         # Compute agent utilities
-        agent_utilities = self._compute_agent_utilities(allocation_matrix, utilities, agent_ids)
+        agent_utilities = self._compute_agent_utilities  # compute per-agent utility scores(allocation_matrix, utilities, agent_ids)
         
         # Check fairness constraints
         fairness_satisfied = self._check_fairness_constraints(allocation_matrix, utilities, constraints)
@@ -282,7 +282,20 @@ class BaseAllocator(ABC):
             return [f"resource_{i}" for i in range(utilities.shape[1])]
     
     def _validate_input_data(self, utilities: UtilityMatrix, agent_ids: List[AgentID], resource_ids: List[ResourceID]):
-        """Validate input data consistency and format."""
+        """
+        Examples:
+            >>> import numpy as np
+            >>> utilities = np.array([[1.0, 2.0], [3.0, 4.0]])
+            >>> agent_ids = ['a1', 'a2']
+            >>> resource_ids = ['r1', 'r2']
+            >>> # should not raise
+            >>> self._validate_input_data(utilities, agent_ids, resource_ids)
+        
+        Notes:
+            - Ensures 2D utilities and matching lengths.
+            - Rejects NaN/Inf to avoid undefined allocations.
+            - Logging provides shapes and counts when verbose is enabled.
+Validate input data consistency and format."""
         if utilities.ndim != 2:
             raise ValueError("Utility matrix must be 2-dimensional")
         
