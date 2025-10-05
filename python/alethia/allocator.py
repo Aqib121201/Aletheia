@@ -307,6 +307,9 @@ class BaseAllocator(ABC):
             - Rejects NaN/Inf to avoid undefined allocations.
             - Logging provides shapes and counts when verbose is enabled.
 Validate input data consistency and format."""
+        if getattr(self, 'verbose', False):
+            self.logger.debug("_validate_input_data: utilities.shape=%s", getattr(utilities, 'shape', None))
+            self.logger.debug("_validate_input_data: agents=%d resources=%d", len(agent_ids), len(resource_ids))
         if utilities.ndim != 2:
             raise ValueError(f"Utility matrix must be 2-dimensional; got ndim={utilities.ndim}, shape={getattr(utilities, 'shape', None)}")
         
