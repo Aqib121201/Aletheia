@@ -332,6 +332,7 @@ Validate input data consistency and format."""
     @staticmethod
     @staticmethod
     @staticmethod
+    @staticmethod
     
     def _matrix_to_allocation_dict(self, 
                                  allocation_matrix: AllocationMatrix, 
