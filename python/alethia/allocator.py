@@ -288,6 +288,17 @@ class BaseAllocator(ABC):
             >>> utilities = np.array([[1.0, 2.0], [3.0, 4.0]])
             >>> agent_ids = ['a1', 'a2']
             >>> resource_ids = ['r1', 'r2']
+            >>> self._validate_input_data(utilities, agent_ids, resource_ids)
+        
+        Notes:
+            - Ensures 2D utilities and matching lengths.
+            - Rejects NaN/Inf; logs shapes/counts when verbose.
+
+        Examples:
+            >>> import numpy as np
+            >>> utilities = np.array([[1.0, 2.0], [3.0, 4.0]])
+            >>> agent_ids = ['a1', 'a2']
+            >>> resource_ids = ['r1', 'r2']
             >>> # should not raise
             >>> self._validate_input_data(utilities, agent_ids, resource_ids)
         
@@ -297,19 +308,19 @@ class BaseAllocator(ABC):
             - Logging provides shapes and counts when verbose is enabled.
 Validate input data consistency and format."""
         if utilities.ndim != 2:
-            raise ValueError("Utility matrix must be 2-dimensional")
+            raise ValueError(f"Utility matrix must be 2-dimensional; got ndim={utilities.ndim}, shape={getattr(utilities, 'shape', None)}")
         
         if len(agent_ids) != utilities.shape[0]:
-            raise ValueError("Number of agent IDs must match utility matrix rows")
+            raise ValueError(f"Number of agent IDs must match utility matrix rows; len(agent_ids)={len(agent_ids)}, rows={utilities.shape[0]}")
         
         if len(resource_ids) != utilities.shape[1]:
-            raise ValueError("Number of resource IDs must match utility matrix columns")
+            raise ValueError(f"Number of resource IDs must match utility matrix columns; len(resource_ids)={len(resource_ids)}, cols={utilities.shape[1]}")
         
         if not np.isfinite(utilities).all():
-            raise ValueError("Utility matrix contains non-finite values")
+            raise ValueError("Utility matrix contains non-finite values (NaN/Inf)")
         
         if utilities.shape[0] == 0 or utilities.shape[1] == 0:
-            raise ValueError("Utility matrix cannot be empty")
+            raise ValueError(f"Utility matrix cannot be empty; shape={utilities.shape}")
     @staticmethod
     @staticmethod
     @staticmethod
