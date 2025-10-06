@@ -333,6 +333,7 @@ Validate input data consistency and format."""
     @staticmethod
     @staticmethod
     @staticmethod
+    @staticmethod
     
     def _matrix_to_allocation_dict(self, 
                                  allocation_matrix: AllocationMatrix, 
@@ -346,6 +347,7 @@ Validate input data consistency and format."""
                 if allocation_matrix[i, j] > 1e-10:  # Only include non-zero allocations
                     allocations[agent_id][resource_id] = float(allocation_matrix[i, j])
         return allocations
+    @staticmethod
     @staticmethod
     @staticmethod
     @staticmethod
